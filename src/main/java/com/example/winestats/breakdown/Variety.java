@@ -19,7 +19,6 @@ public class Variety {
         // the constructor will construct a hashmap with cumulative percentages by variety type
         this.breakdownByYear = new HashMap<String, Double>();
 
-        lotCode = "11YVCHAR001";
         // retrieve data from json
 
         JSONParser parser = new JSONParser();
@@ -33,11 +32,21 @@ public class Variety {
             for (Object o:componentsList) {
                 JSONObject component = (JSONObject) o;
 
+                // find the relevant variety and percentage values
                 String variety = (String) component.get("variety");
                 System.out.println(variety);
 
                 Double percentage = (Double) component.get("percentage");
                 System.out.println(percentage);
+
+                // add to cumulative total if variety key exists already, otherwise create new entry
+                if (breakdownByYear.containsKey(variety)) {
+                    breakdownByYear.put(variety, breakdownByYear.get(variety) + percentage);
+                } else {
+                    breakdownByYear.put(variety, percentage);
+                }
+
+                System.out.println(breakdownByYear);
 
             }
         } catch (IOException | ParseException e) {
@@ -48,9 +57,9 @@ public class Variety {
 
     }
 
-    public Double getPercentage(String variety) {
+    public HashMap<String, Double> getBreakdown() {
 
         // return the cumulative percentage for variety
-        return breakdownByYear.get(variety);
+        return breakdownByYear;
     }
 }
