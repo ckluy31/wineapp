@@ -1,5 +1,7 @@
 package com.example.winestats.breakdown;
 
+import org.json.simple.JSONArray;
+
 import java.util.List;
 
 public class Wine {
@@ -10,13 +12,13 @@ public class Wine {
     private String tankCode;
     private String productState;
     private String ownerName;
-    private List<BreakdownComponent> componentList;
+    private JSONArray componentList;
 
     public Wine(){
 
     }
 
-    public Wine(String lotCode, Double volume, String description, String tankCode, String productState, String ownerName, List<BreakdownComponent> componentList) {
+    public Wine(String lotCode, Double volume, String description, String tankCode, String productState, String ownerName, JSONArray componentList) {
         this.lotCode = lotCode;
         this.volume = volume;
         this.description = description;
@@ -74,11 +76,11 @@ public class Wine {
         this.ownerName = ownerName;
     }
 
-    public List<BreakdownComponent> getComponentList() {
+    public JSONArray getComponentList() {
         return componentList;
     }
 
-    public void setComponentList(List<BreakdownComponent> componentList) {
+    public void setComponentList(JSONArray componentList) {
         this.componentList = componentList;
     }
 }

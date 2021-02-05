@@ -7,20 +7,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BreakdownController {
-    //private final BreakdownService breakdownService;
+    private final BreakdownService breakdownService;
     private final WineService wineService;
 
     @Autowired
-    public BreakdownController(WineService wineService) {
-        //this.breakdownService = breakdownService;
+    public BreakdownController(BreakdownService breakdownService, WineService wineService) {
+        this.breakdownService = breakdownService;
         this.wineService = wineService;
     }
 
-//    @RequestMapping(path = "/api/breakdown/variety/{lotCode}")
-//    public String getBreakdownByVariety(@PathVariable String lotCode) {
-//        System.out.println(lotCode);
-//        return breakdownService.getBreakdownByVariety(lotCode);
-//    }
+    @RequestMapping(path = "/api/breakdown/variety/{lotCode}")
+    public String getBreakdownByVariety(@PathVariable String lotCode) {
+        Wine wineObj = wineService.readJsonFile(lotCode);
+        return breakdownService.getBreakdownByVariety(wineObj).toString();
+    }
 
     @RequestMapping(path = "/api/test/{lotCode}")
     public Object populate(@PathVariable String lotCode) {

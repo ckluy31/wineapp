@@ -42,43 +42,8 @@ public class WineService {
 
             JSONArray componentsList = (JSONArray) data.get("components");
 
-            for (Object o:componentsList) {
-                JSONObject element = (JSONObject) o;
 
-                // find the relevant variety and percentage values
-                String variety = (String) element.get("variety");
-                System.out.println(variety);
-
-                Double percentage = (Double) element.get("percentage");
-                System.out.println(percentage);
-
-                BreakdownComponent component = new BreakdownComponent(variety, percentage);
-                listComponents.add(component);
-
-//                //add to cumulative total if variety key exists already, otherwise create new entry
-//                if (mappedComponents.containsKey(variety)) {
-//                    mappedComponents.put(variety, mappedComponents.get(variety) + percentage);
-//                } else {
-//                    mappedComponents.put(variety, percentage);
-//                }
-//                System.out.println(mappedComponents.entrySet());
-//
-//                // sort the list to be ordered by highest percentage value first
-//                orderedCompList = new LinkedList<Map.Entry<String, Double>>(mappedComponents.entrySet());
-//                orderedCompList.sort(new Comparator<Map.Entry<String, Double>>() {
-//                    @Override
-//                    public int compare(Map.Entry<String, Double> o1, Map.Entry<String, Double> o2) {
-//                        // comparator will sort by descending order of percentage
-//                        return o2.getValue().compareTo(o1.getValue());
-//
-//                    }
-//                });
-//                System.out.println(orderedCompList);
-
-
-            }
-
-            wineObj = new Wine(lotCode, volume, description, tankCode, productState, ownerName, listComponents);
+            wineObj = new Wine(lotCode, volume, description, tankCode, productState, ownerName, componentsList);
 
         } catch (IOException | ParseException e) {
             e.printStackTrace();
