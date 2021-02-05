@@ -16,8 +16,8 @@ public class BreakdownService {
         for (Object o:unsortedBreakdown) {
             JSONObject element = (JSONObject) o;
 
-            // find the relevant variety and percentage values
-            String type = (String) element.get(typeBreakdown);
+            // find the relevant type and percentage values
+            String type = element.get(typeBreakdown).toString();
             System.out.println(type);
 
             Double percentage = (Double) element.get("percentage");

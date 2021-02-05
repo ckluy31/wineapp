@@ -18,11 +18,28 @@ public class BreakdownController {
         this.wineService = wineService;
     }
 
+    @RequestMapping(path = "/api/breakdown/year/{lotCode}")
+    public String getBreakdownByYear(@PathVariable String lotCode) {
+        Wine wineObj = wineService.readJsonFile(lotCode);
+        return breakdownService.getBreakdownByType(wineObj, "year").toString();
+    }
+
     @RequestMapping(path = "/api/breakdown/variety/{lotCode}")
     public String getBreakdownByVariety(@PathVariable String lotCode) {
         Wine wineObj = wineService.readJsonFile(lotCode);
         return breakdownService.getBreakdownByType(wineObj, "variety").toString();
     }
+
+    @RequestMapping(path = "/api/breakdown/region/{lotCode}")
+    public String getBreakdownByRegion(@PathVariable String lotCode) {
+        Wine wineObj = wineService.readJsonFile(lotCode);
+        return breakdownService.getBreakdownByType(wineObj, "region").toString();
+    }
+//    @RequestMapping(path = "/api/breakdown/year-variety/{lotCode}")
+//    public String getBreakdownByYearVariety(@PathVariable String lotCode) {
+//        Wine wineObj = wineService.readJsonFile(lotCode);
+//        return breakdownService.getBreakdownByType(wineObj, "year-variety").toString();
+//    }
 
     @RequestMapping(path = "/api/test/{lotCode}")
     public Object populate(@PathVariable String lotCode) {
