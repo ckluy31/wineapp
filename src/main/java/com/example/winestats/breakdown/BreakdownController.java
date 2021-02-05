@@ -21,7 +21,7 @@ public class BreakdownController {
     @RequestMapping(path = "/api/breakdown/variety/{lotCode}")
     public String getBreakdownByVariety(@PathVariable String lotCode) {
         Wine wineObj = wineService.readJsonFile(lotCode);
-        return breakdownService.getBreakdownByVariety(wineObj).toString();
+        return breakdownService.getBreakdownByType(wineObj, "variety").toString();
     }
 
     @RequestMapping(path = "/api/test/{lotCode}")

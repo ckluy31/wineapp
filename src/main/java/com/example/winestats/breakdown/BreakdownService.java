@@ -10,24 +10,24 @@ import java.util.*;
 @Service
 public class BreakdownService {
 
-    public List<BreakdownComponent> getBreakdownByVariety(Wine wine) {
+    public List<BreakdownComponent> getBreakdownByType(Wine wine, String typeBreakdown) {
         JSONArray unsortedBreakdown = wine.getComponentList();
         LinkedHashMap<String, Double> map = new LinkedHashMap<String, Double>();
         for (Object o:unsortedBreakdown) {
             JSONObject element = (JSONObject) o;
 
             // find the relevant variety and percentage values
-            String variety = (String) element.get("variety");
-            System.out.println(variety);
+            String type = (String) element.get(typeBreakdown);
+            System.out.println(type);
 
             Double percentage = (Double) element.get("percentage");
             System.out.println(percentage);
 
             //add to cumulative total if variety key exists already, otherwise create new entry
-            if (map.containsKey(variety)) {
-                map.put(variety, map.get(variety) + percentage);
+            if (map.containsKey(type)) {
+                map.put(type, map.get(type) + percentage);
             } else {
-                map.put(variety, percentage);
+                map.put(type, percentage);
             }
         }
         System.out.println(map.toString());
