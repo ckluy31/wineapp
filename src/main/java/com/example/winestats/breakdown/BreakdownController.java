@@ -2,10 +2,14 @@ package com.example.winestats.breakdown;
 
 import com.example.winestats.wine.Wine;
 import com.example.winestats.wine.WineService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class BreakdownController {
@@ -19,21 +23,24 @@ public class BreakdownController {
     }
 
     @RequestMapping(path = "/api/breakdown/year/{lotCode}")
-    public String getBreakdownByYear(@PathVariable String lotCode) {
+    public String getBreakdownByYear(@PathVariable String lotCode) throws JsonProcessingException {
         Wine wineObj = wineService.readJsonFile(lotCode);
-        return breakdownService.getBreakdownByType(wineObj, "year").toString();
+        Breakdown bd = breakdownService.getBreakdownByType(wineObj, "year");
+        return new ObjectMapper().writeValueAsString(bd);
     }
 
     @RequestMapping(path = "/api/breakdown/variety/{lotCode}")
-    public String getBreakdownByVariety(@PathVariable String lotCode) {
+    public String getBreakdownByVariety(@PathVariable String lotCode) throws JsonProcessingException {
         Wine wineObj = wineService.readJsonFile(lotCode);
-        return breakdownService.getBreakdownByType(wineObj, "variety").toString();
+        Breakdown bd = breakdownService.getBreakdownByType(wineObj, "variety");
+        return new ObjectMapper().writeValueAsString(bd);
     }
 
     @RequestMapping(path = "/api/breakdown/region/{lotCode}")
-    public String getBreakdownByRegion(@PathVariable String lotCode) {
+    public String getBreakdownByRegion(@PathVariable String lotCode) throws JsonProcessingException {
         Wine wineObj = wineService.readJsonFile(lotCode);
-        return breakdownService.getBreakdownByType(wineObj, "region").toString();
+        Breakdown bd = breakdownService.getBreakdownByType(wineObj, "region");
+        return new ObjectMapper().writeValueAsString(bd);
     }
 //    @RequestMapping(path = "/api/breakdown/year-variety/{lotCode}")
 //    public String getBreakdownByYearVariety(@PathVariable String lotCode) {

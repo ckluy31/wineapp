@@ -10,7 +10,7 @@ import java.util.*;
 @Service
 public class BreakdownService {
 
-    public List<BreakdownComponent> getBreakdownByType(Wine wine, String typeBreakdown) {
+    public Breakdown getBreakdownByType(Wine wine, String typeBreakdown) {
         JSONArray unsortedBreakdown = wine.getComponentList();
         LinkedHashMap<String, Double> map = new LinkedHashMap<String, Double>();
         for (Object o:unsortedBreakdown) {
@@ -18,10 +18,8 @@ public class BreakdownService {
 
             // find the relevant type and percentage values
             String type = element.get(typeBreakdown).toString();
-            System.out.println(type);
 
             Double percentage = (Double) element.get("percentage");
-            System.out.println(percentage);
 
             //add to cumulative total if variety key exists already, otherwise create new entry
             if (map.containsKey(type)) {
@@ -30,7 +28,6 @@ public class BreakdownService {
                 map.put(type, percentage);
             }
         }
-        System.out.println(map.toString());
         List<Map.Entry<String, Double>> list = new LinkedList<Map.Entry<String, Double>>(map.entrySet());
         list.sort(new Comparator<Map.Entry<String, Double>>() {
             @Override
@@ -40,7 +37,6 @@ public class BreakdownService {
 
             }
         });
-        System.out.println(list.toString());
 
         List<BreakdownComponent> listComponents = new ArrayList<>();
         for (Map.Entry<String, Double> entry:list) {
@@ -48,6 +44,8 @@ public class BreakdownService {
             String percentage = entry.getValue().toString();
             listComponents.add(new BreakdownComponent(key, percentage));
         }
-        return listComponents;
+
+        Breakdown breakdown = new Breakdown(typeBreakdown, listComponents);
+        return breakdown;
     }
 }

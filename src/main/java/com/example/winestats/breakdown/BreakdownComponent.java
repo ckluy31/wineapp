@@ -1,6 +1,8 @@
 package com.example.winestats.breakdown;
 
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,14 +24,6 @@ public class BreakdownComponent {
     public String getPercentage() {
         return percentage;
     }
-
-    public Map<String, String> getComponent() {
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("percentage", this.percentage.toString());
-        map.put("key", this.key);
-        return map;
-    }
-
 
 
 }

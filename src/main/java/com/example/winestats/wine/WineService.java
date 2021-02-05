@@ -20,14 +20,10 @@ public class WineService {
         try {
             String fileLocation = "./data/" + lotCode + ".json";
             JSONObject data = (JSONObject) parser.parse(new FileReader(fileLocation));
-            String json = data.toJSONString();
-            System.out.println(json);
 
             Double volume = (Double) data.get("volume");
-            System.out.println("Volume:" + volume);
 
             String description = (String) data.get("description");
-            System.out.println("Des:" + description);
 
             String tankCode = (String) data.get("tankCode");
 
