@@ -1,5 +1,7 @@
 package com.example.winestats.breakdown;
 
+import com.example.winestats.wine.Wine;
+import com.example.winestats.wine.WineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

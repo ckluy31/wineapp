@@ -1,11 +1,11 @@
 package com.example.winestats.breakdown;
 
+import com.example.winestats.wine.Wine;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 public class BreakdownService {

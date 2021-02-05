@@ -1,4 +1,4 @@
-package com.example.winestats.breakdown;
+package com.example.winestats.wine;
 
 import org.json.simple.JSONArray;
 
