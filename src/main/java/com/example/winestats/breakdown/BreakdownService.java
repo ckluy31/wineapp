@@ -5,7 +5,8 @@
 //import java.util.*;
 //
 //@Service
-//public class VarietyService {
+//public class BreakdownService {
+//
 //    public String getBreakdownByVariety(String lotCode) {
 //        HashMap<String, Double> breakdown= new Variety(lotCode).getBreakdown();
 //        List<Map.Entry<String, Double>> list = new LinkedList<Map.Entry<String, Double>>(breakdown.entrySet());

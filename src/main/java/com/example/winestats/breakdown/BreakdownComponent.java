@@ -3,7 +3,7 @@ package com.example.winestats.breakdown;
 
 public class BreakdownComponent {
     private final String key;
-    private final Double percentage;
+    private Double percentage;
 
 
     public BreakdownComponent(String key, Double percentage) {
@@ -12,4 +12,15 @@ public class BreakdownComponent {
 
     }
 
+    public String getKey() {
+        return key;
+    }
+
+    public Double getPercentage() {
+        return percentage;
+    }
+
+    public void addPercentage(Double newPercentage) {
+        this.percentage += newPercentage;
+    }
 }
