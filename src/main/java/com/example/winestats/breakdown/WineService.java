@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
 
 @Service
 public class WineService {
@@ -16,7 +15,6 @@ public class WineService {
     public Wine readJsonFile(String lotCode) {
         Wine wineObj;
         wineObj = new Wine();
-        List<Map.Entry<String, Double>> orderedCompList = null;
         // retrieve data from json
         JSONParser parser = new JSONParser();
         try {
@@ -36,9 +34,6 @@ public class WineService {
             String productState = (String) data.get("productState");
 
             String ownerName = (String) data.get("ownerName");
-
-            List<BreakdownComponent> listComponents = new ArrayList<BreakdownComponent>();
-
 
             JSONArray componentsList = (JSONArray) data.get("components");
 
