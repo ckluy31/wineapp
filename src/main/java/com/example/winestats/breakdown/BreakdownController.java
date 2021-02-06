@@ -42,15 +42,11 @@ public class BreakdownController {
         Breakdown bd = breakdownService.getBreakdownByType(wineObj, "region");
         return new ObjectMapper().writeValueAsString(bd);
     }
-//    @RequestMapping(path = "/api/breakdown/year-variety/{lotCode}")
-//    public String getBreakdownByYearVariety(@PathVariable String lotCode) {
-//        Wine wineObj = wineService.readJsonFile(lotCode);
-//        return breakdownService.getBreakdownByType(wineObj, "year-variety").toString();
-//    }
-
-    @RequestMapping(path = "/api/test/{lotCode}")
-    public Object populate(@PathVariable String lotCode) {
-        System.out.println(lotCode);
-        return wineService.readJsonFile(lotCode);
+    @RequestMapping(path = "/api/breakdown/year-variety/{lotCode}")
+    public String getBreakdownByYearVariety(@PathVariable String lotCode) throws JsonProcessingException {
+        Wine wineObj = wineService.readJsonFile(lotCode);
+        Breakdown bd = breakdownService.getBreakdownByType(wineObj, "year-variety");
+        return new ObjectMapper().writeValueAsString(bd);
     }
+
 }

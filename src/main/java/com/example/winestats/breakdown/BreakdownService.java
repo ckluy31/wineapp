@@ -15,11 +15,20 @@ public class BreakdownService {
         LinkedHashMap<String, Double> map = new LinkedHashMap<String, Double>();
         for (Object o:unsortedBreakdown) {
             JSONObject element = (JSONObject) o;
+            String type;
+            Double percentage;
 
             // find the relevant type and percentage values
-            String type = element.get(typeBreakdown).toString();
+            if (typeBreakdown.equals("year-variety")) {
+                type = element.get("year").toString() + "-" + element.get("variety").toString();
+            } else {
 
-            Double percentage = (Double) element.get("percentage");
+                type = element.get(typeBreakdown).toString();
+
+            }
+
+
+            percentage = (Double) element.get("percentage");
 
             //add to cumulative total if variety key exists already, otherwise create new entry
             if (map.containsKey(type)) {
