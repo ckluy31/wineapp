@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import iconImg from './ICON.png'
 import './search.css'
+import SearchBar from "./SearchBar";
 
 export default function SearchPage() {
     return(
@@ -10,9 +11,13 @@ export default function SearchPage() {
                     <header className={"SearchHeader"}>
                         Wine Search
                     </header>
-                    <img src={iconImg} className={"Icon"}/>
+                    <div className={"IconContainer"}>
+                        <img src={iconImg} className={"Icon"} alt={"icon"}/>
+                    </div>
                 </div>
+                <SearchBar/>
             </div>
+
         </div>
 
     )

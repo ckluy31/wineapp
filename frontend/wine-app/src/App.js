@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import SearchPage from "./search/SearchPage";
-import 'bootstrap/dist/css/bootstrap.css'
 
 function App() {
   return (

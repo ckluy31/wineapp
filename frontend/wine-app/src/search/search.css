@@ -109,3 +109,121 @@
     flex-grow: 0;
     margin: 0px 8px;
 }
+
+.SearchBar {
+    /* Search */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 624px;
+    height: 48px;
+    left: 0px;
+    top: 73px;
+
+    /* #E8E8E8 */
+
+    border: 1px solid #E8E8E8;
+    border-radius: 2px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: flex-start;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+.SearchInput {
+    /* Input/Square/Hint */
+
+
+    position: static;
+    width: 624px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+
+    /*  #FFFFFF */
+
+    background: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.ActionsLeft {
+    /* Actions/Left */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 12px;
+
+    position: absolute;
+    width: 294px;
+    height: 24px;
+    left: 0px;
+    top: calc(50% - 24px/2);
+
+}
+
+.ActionsRight {
+    /* Actions/Right */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+
+    position: absolute;
+    visibility: hidden;
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    top: calc(50% - 40px/2);
+}
+
+.CloseIcon {
+    /* Close */
+
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    font-family: Material Icons, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    /* or 137% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* #CCCCCC */
+
+    color: #CCCCCC;
+
+}
