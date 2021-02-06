@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 # dependencies
 /node_modules
+/wine-app/node_modules
 /.pnp
 .pnp.js
 
@@ -25,4 +26,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-../../.idea/
+../.idea/*
+.idea/*
