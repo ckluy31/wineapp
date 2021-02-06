@@ -18,7 +18,7 @@ public class WineService {
         // retrieve data from json
         JSONParser parser = new JSONParser();
         try {
-            String fileLocation = "./data/" + lotCode + ".json";
+            String fileLocation = "./backend/data/" + lotCode + ".json";
             JSONObject data = (JSONObject) parser.parse(new FileReader(fileLocation));
 
             Double volume = (Double) data.get("volume");
