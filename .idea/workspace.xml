@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dcb04c04-fa9b-4b95-82ca-65474f339688" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/wine-app/public/data/11YVCHAR001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wine-app/public/data/11YVCHAR002.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wine-app/public/data/15MPPN002-VK.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/wine-app/src/search/SearchPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/wine-app/src/search/SearchPage.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../.m2/wrapper/dists/apache-maven-3.6.3-bin/1iopthnavndlasol9gbrbg6bf2/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1o6QC85yqzhDwlXid9AeZ15pVe3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/src/main/resources" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/resources" />
+      <recent name="$PROJECT_DIR$/frontend/wine-app/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src/main/resources" />
+      <recent name="$PROJECT_DIR$/frontend/wine-app/src/search" />
+      <recent name="$PROJECT_DIR$/frontend/wine-app" />
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WinestatsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="winestats" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.winestats.WinestatsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dcb04c04-fa9b-4b95-82ca-65474f339688" name="Default Changelist" comment="" />
+      <created>1612604431546</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612604431546</updated>
+      <workItem from="1612604433138" duration="917000" />
+      <workItem from="1612605577948" duration="320000" />
+      <workItem from="1612605920947" duration="1199000" />
+      <workItem from="1612607383489" duration="28683000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1085" y="-980" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612679795970">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="1085" y="-980" key="#com.intellij.execution.impl.EditConfigurationsDialog/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612679795970" />
+    <state x="1361" y="-833" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612615913992">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="1361" y="-833" key="#com.intellij.fileTypes.FileTypeChooser/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612615913992" />
+    <state x="1359" y="-888" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612692474416">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="1359" y="-888" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612692474416" />
+    <state width="1878" height="215" key="GridCell.Tab.0.bottom" timestamp="1612699422312">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.0.bottom/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422312" />
+    <state width="1878" height="215" key="GridCell.Tab.0.center" timestamp="1612699422296">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.0.center/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422296" />
+    <state width="1878" height="215" key="GridCell.Tab.0.left" timestamp="1612699422293">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.0.left/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422293" />
+    <state width="1878" height="215" key="GridCell.Tab.0.right" timestamp="1612699422298">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.0.right/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422298" />
+    <state width="1878" height="215" key="GridCell.Tab.1.bottom" timestamp="1612699422322">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.1.bottom/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422322" />
+    <state width="1878" height="215" key="GridCell.Tab.1.center" timestamp="1612699422316">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.1.center/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422316" />
+    <state width="1878" height="215" key="GridCell.Tab.1.left" timestamp="1612699422315">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.1.left/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422315" />
+    <state width="1878" height="215" key="GridCell.Tab.1.right" timestamp="1612699422320">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="215" key="GridCell.Tab.1.right/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612699422320" />
+    <state x="1044" y="-979" key="new project wizard" timestamp="1612606555466">
+      <screen x="661" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="1044" y="-979" key="new project wizard/661.-1057.1920.1057/0.23.1440.877/-1259.-1057.1920.1057@661.-1057.1920.1057" timestamp="1612606555466" />
+  </component>
+</project>

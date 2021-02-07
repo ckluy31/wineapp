@@ -4,12 +4,23 @@ import './search.css'
 import closeIcon from "./Close.png";
 
 export default function SearchPage(){
-    const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
+    const [searchQuery, setSearchQuery] = useState(''); // keep track of the search query
+    const [searchResults, setSearchResults] = useState([]); // regularly update results based on search query
 
-    function handleSearch({target}){
+    async function handleSearch({target}){
         const searchQuery = target.value;
         setSearchQuery(searchQuery);
+
+        // call to backend api to search
+        const response = await fetch(`http://localhost:8080/api/wine/search/11`, {
+            method:"GET",
+            headers: {
+                Accept: "application/json, text/plain, */*",
+                "Content-Type": "application/json"
+            }
+        });
+        const results = await response;
+        console.log(results.json());
     }
 
 
@@ -33,7 +44,7 @@ export default function SearchPage(){
                     <input className={"SearchQuery"} onChange={handleSearch} />
                 </div>
             </div>
-            <h1>{searchQuery}</h1>
+            <h1>hrdrdh</h1>
 
         </div>
 
