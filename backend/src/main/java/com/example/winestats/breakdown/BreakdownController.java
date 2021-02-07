@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 public class BreakdownController {
     private final BreakdownService breakdownService;
@@ -48,5 +46,4 @@ public class BreakdownController {
         Breakdown bd = breakdownService.getBreakdownByType(wineObj, "year-variety");
         return new ObjectMapper().writeValueAsString(bd);
     }
-
 }

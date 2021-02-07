@@ -4,13 +4,33 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class WineService {
+
+    public List<Wine> readAllWine() {
+        List<Wine> allWines = new ArrayList<Wine>();
+        try {
+            File[] files = new File("./backend/data/").listFiles();
+            assert files != null;
+            for (File file: files) {
+                String lotCode = file.getName().replace(".json", "");
+                allWines.add(readJsonFile(lotCode));
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+        return allWines;
+    }
 
     public Wine readJsonFile(String lotCode) {
         Wine wineObj;
