@@ -35,21 +35,31 @@ export default function SearchPage(){
                         Wine Search
                     </header>
                     <div className={"IconContainer"}>
-                        <img src={iconImg} className={"Icon"} alt={"icon"}/>
+                        <img src={iconImg} className={"IconContainer"} alt={"icon"}/>
                     </div>
                 </div>
-                <div className={"SearchInputBox"}>
-                    <div className={"ActionsLeft"}>
-                        <img src={closeIcon} className="CloseIcon" alt={"icon"}/>
+                <div className={"SearchRows"}>
+                    <div className={"SearchInputBox"}>
+                        <div className={"SearchActionsLeft"}>
+                            <div className={"LabelLeft"}>
+
+                            </div>
+                            <div className={"SearchIconBox"}>
+                                <img src={closeIcon} className="CloseIcon" alt={"icon"}/>
+                            </div>
+
+                        </div>
+                        <div className={"SearchActionsRight"}>
+                        </div>
+                        <input className={"SearchQuery"} onChange={handleSearch} />
                     </div>
-                    <div className={"ActionsRight"}>
+                    <div className={"ListResults"}>
+
+                        {searchResults.map((wine) => <SearchResult key={wine.lotCode} searchResult={wine}/>)}
                     </div>
-                    <input className={"SearchQuery"} onChange={handleSearch} />
                 </div>
             </div>
-            <div>
-                {searchResults.map((wine) => <p key={wine.lotCode}> {wine.description}</p>)}
-            </div>
+
 
         </div>
 

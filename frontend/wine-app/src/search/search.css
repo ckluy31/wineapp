@@ -92,22 +92,18 @@
 }
 
 .Icon {
-    /* IconSide/Product/Default */
+    /* ICON */
 
 
-    position: static;
-    width: 32px;
-    height: 32px;
-    left: 167px;
-    top: 16.5px;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 9.38%;
+    bottom: 9.38%;
 
+    /* #3A3B3B */
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    margin: 0px 8px;
+    background: #3A3B3B;
 }
 
 .SearchBar {
@@ -163,7 +159,7 @@
     margin: 0px 0px;
 }
 
-.ActionsLeft {
+.SearchActionsLeft {
     /* Actions/Left */
 
 
@@ -182,7 +178,77 @@
 
 }
 
-.ActionsRight {
+.LabelLeft {
+    /* Label Left */
+
+
+    position: static;
+    width: 238px;
+    height: 18px;
+    left: 44px;
+    top: calc(50% - 18px/2);
+
+    /* Label Light 13px */
+
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+
+    display: flex;
+    align-items: center;
+
+    /* #CCCCCC */
+
+    color: #CCCCCC;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+.IconContainer {
+    /* IconSide/Product/Default */
+
+
+    position: static;
+    width: 32px;
+    height: 32px;
+    left: 165px;
+    top: 16.5px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+.SearchIconBox {
+    /* Icon24/Action/Search */
+
+
+    position: static;
+    width: 24px;
+    height: 24px;
+    left: 12px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+.SearchActionsRight {
     /* Actions/Right */
 
 
@@ -228,6 +294,291 @@
 
 }
 
-.SearchQuery {
+.SearchResult {
+    /* Row/Result/Default */
 
+
+    position: static;
+    width: 624px;
+    height: 56px;
+    left: 0px;
+    top: 1px;
+
+    /*  #FFFFFF */
+
+    background: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 0px;
+
+
+}
+
+.SearchResult2
+
+.ActionsLeft{
+    /* Actions/Left */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 12px;
+
+    position: absolute;
+    width: 208px;
+    height: 36px;
+    left: 0px;
+    top: calc(50% - 36px/2);
+
+}
+
+.Frame10 {
+    /* Frame 10 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 184px;
+    height: 36px;
+    left: 12px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+.ActionsRight{
+    /* Frame 17 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+
+    position: absolute;
+    width: 37px;
+    height: 36px;
+    right: 12px;
+    top: calc(50% - 36px/2);
+}
+
+.Frame17 {
+
+}
+
+.MainResultText{
+    /* 14CH DEMO BLEND */
+
+
+    position: static;
+    width: 100px;
+    height: 18px;
+    left: 0px;
+    top: calc(50% - 18px/2 - 9px);
+
+    /* Label Light 15px */
+
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height, or 120% */
+
+    display: flex;
+    align-items: center;
+
+    /* #0F1010 */
+
+    color: #0F1010;
+    border: 0.5px solid #0F1010;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.SubResultText{
+    /* Text */
+
+
+    position: static;
+    width: 184px;
+    height: 18px;
+    left: 0px;
+    bottom: 0px;
+
+    /* Label Light 13px */
+
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+
+    display: flex;
+    align-items: center;
+
+    /* #3A3B3B */
+
+    color: #3A3B3B;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.ListResults {
+    /* List/Results */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 624px;
+    height: 114px;
+    left: 0px;
+    top: 48px;
+
+    /*  #FFFFFF */
+
+    background: #FFFFFF;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.SearchRows {
+    /* Search */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 624px;
+    height: 162px;
+    left: 0px;
+    top: 73px;
+
+    /* #E8E8E8 */
+
+    border: 1px solid #E8E8E8;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.04));
+    border-radius: 2px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    align-self: flex-start;
+    flex-grow: 0;
+    margin: 8px 0px;
+}
+
+.VolumeTop {
+    /* Volume */
+
+
+    position: static;
+    width: 37px;
+    height: 18px;
+    right: 0px;
+    top: calc(50% - 18px/2 + 9px);
+
+    /* Label Light 13px */
+
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    /* #0F1010 */
+
+    color: #0F1010;
+    opacity: 0.6;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.VolumeBot {
+    /* Volume */
+
+
+    position: static;
+    width: 37px;
+    height: 18px;
+    right: 0px;
+    top: calc(50% - 18px/2 - 9px);
+
+    /* Label Light 13px */
+
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    /* #0F1010 */
+
+    color: #0F1010;
+    opacity: 0.6;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 0px;
 }
