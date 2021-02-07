@@ -141,7 +141,7 @@
     margin: 8px 0px;
 }
 
-.SearchInput {
+.SearchInputBox {
     /* Input/Square/Hint */
 
 
@@ -225,5 +225,9 @@
     /* #CCCCCC */
 
     color: #CCCCCC;
+
+}
+
+.SearchQuery {
 
 }
