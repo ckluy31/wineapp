@@ -4,13 +4,11 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.springframework.boot.web.context.WebServerInitializedEvent;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +28,28 @@ public class WineService {
             e.printStackTrace();
         }
         return allWines;
+    }
+
+    public List<Wine> searchWine(String searchQuery) {
+        List<Wine> allWines = readAllWine();
+        List<Wine> matchedWines = new ArrayList<Wine>();
+        // make search query case insensitive
+        searchQuery = searchQuery.toLowerCase();
+        for(Wine wine:allWines) {
+            // Assume that lot code is never null as it is a unique identifier
+            String wineLotCode = wine.getLotCode();
+            String wineDescription = wine.getDescription();
+            if (wineDescription != null) {
+                // make description case insensitive
+                wineDescription = wineDescription.toLowerCase();
+            }
+            // add as matched list if the search query is a substring of either its lotcode or description
+            if (wineLotCode.contains(searchQuery) || (wineDescription != null && wineDescription.contains(searchQuery))) {
+                matchedWines.add(wine);
+            }
+        }
+
+        return matchedWines;
     }
 
     public Wine readJsonFile(String lotCode) {
