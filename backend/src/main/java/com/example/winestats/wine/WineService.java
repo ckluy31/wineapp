@@ -15,10 +15,20 @@ import java.util.List;
 @Service
 public class WineService {
 
+    public JSONObject convertStringtoJSONObject (String str) throws ParseException {
+        JSONParser parser = new JSONParser();
+        return (JSONObject) parser.parse(str);
+    }
+
+    public JSONArray convertStringtoJSONArray (String str) throws ParseException {
+        JSONParser parser = new JSONParser();
+        return (JSONArray) parser.parse(str);
+    }
+
     public List<Wine> readAllWine() {
         List<Wine> allWines = new ArrayList<Wine>();
         try {
-            File[] files = new File("./backend/data/").listFiles();
+            File[] files = new File("./backend/src/main/resources/data/").listFiles();
             assert files != null;
             for (File file: files) {
                 String lotCode = file.getName().replace(".json", "");
@@ -58,7 +68,7 @@ public class WineService {
         // retrieve data from json
         JSONParser parser = new JSONParser();
         try {
-            String fileLocation = "./backend/data/" + lotCode + ".json";
+            String fileLocation = "./backend/src/main/resources/data/" + lotCode + ".json";
             JSONObject data = (JSONObject) parser.parse(new FileReader(fileLocation));
 
             Double volume = (Double) data.get("volume");
