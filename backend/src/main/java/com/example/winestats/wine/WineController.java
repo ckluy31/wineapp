@@ -1,14 +1,11 @@
 package com.example.winestats.wine;
 
-import com.example.winestats.breakdown.Breakdown;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -21,22 +18,11 @@ public class WineController {
         this.wineService = wineService;
     }
 
-    @RequestMapping(path = "/api/wine/all")
-    public String getAllWines() throws JsonProcessingException {
-        List<Wine> allWines = wineService.readAllWine();
-        return new ObjectMapper().writeValueAsString(allWines);
-    }
-
     @RequestMapping(path = "/api/wine/search/{searchQuery}")
     public String getWineBySearchQuery(@PathVariable String searchQuery) throws JsonProcessingException {
             List<Wine> matchedWine = wineService.searchWine(searchQuery);
             return new ObjectMapper().writeValueAsString(matchedWine);
     }
 
-//    @RequestMapping(path = "/api/wine/{lotCode}")
-//    public String getWineByLotCode(@PathVariable String lotCode) throws JsonProcessingException {
-//            Wine wineObj = wineService.readJsonFile(lotCode);
-//            return new ObjectMapper().writeValueAsString(wineObj);
-//    }
 
 }
