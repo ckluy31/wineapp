@@ -1,5 +1,6 @@
 package com.example.winestats.wine;
 
+import com.example.winestats.breakdown.Breakdown;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,10 @@ public class WineController {
         return new ObjectMapper().writeValueAsString(allWines);
     }
 
+    @RequestMapping(path = "/api/wine/{lotCode}")
+    public String getWineByLotCode(@PathVariable String lotCode) throws JsonProcessingException {
+        Wine wineObj = wineService.readJsonFile(lotCode);
+        return new ObjectMapper().writeValueAsString(wineObj);
+    }
 
 }
