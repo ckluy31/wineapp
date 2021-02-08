@@ -1,0 +1,186 @@
+.WineDetailsPage {
+    /* #3 Product/Year */
+
+
+    position: relative;
+    width: 1280px;
+    height: 1024px;
+
+    /*  #F5F5F5 */
+
+    background: #E5E5E5;
+}
+.TableProduct {
+    /* Table/Product */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 768px;
+    height: 531px;
+    left: calc(50% - 768px/2);
+    top: 142px;
+}
+
+.HeaderProduct {
+    /* Table/Summary */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0px;
+
+    position: static;
+    width: 768px;
+    height: 144px;
+    left: 0px;
+    top: 134px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 9px 0px;
+}
+
+.NavTabs {
+    /* Nav/Tabs/Upper/Vessels */
+
+
+    position: static;
+    width: 768px;
+    height: 40px;
+    left: 0px;
+    top: 287px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 9px 0px;
+}
+
+.TableDetails {
+    /* Table/Details/Year */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 768px;
+    height: 195px;
+    left: 0px;
+    top: 336px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 9px 0px;
+}
+
+.TableSummaryRow0 {
+    /* Table/Row/Default2 */
+
+
+    position: static;
+    width: 768px;
+    height: 32px;
+    left: 0px;
+    top: 8px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.TableSummaryRow1 {
+    /* Table/Row/Default2 */
+
+
+    position: static;
+    width: 768px;
+    height: 32px;
+    left: 0px;
+    top: 40px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.TableSummaryRow2 {
+    /* Table/Row/Default2 */
+
+
+    position: static;
+    width: 768px;
+    height: 32px;
+    left: 0px;
+    top: 72px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.TableSummaryRow3 {
+    /* Table/Row/Default2 */
+
+
+    position: static;
+    width: 768px;
+    height: 32px;
+    left: 0px;
+    top: 104px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.SummaryDetailsRow {
+    text-align: right;
+}

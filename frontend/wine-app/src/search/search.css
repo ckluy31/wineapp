@@ -96,8 +96,8 @@
 
 
     position: absolute;
-    left: 25%;
-    right: 25%;
+    left: 20%;
+    right: 20%;
     top: 9.38%;
     bottom: 9.38%;
 
@@ -216,7 +216,7 @@
 
 
     position: static;
-    width: 32px;
+    width: 20px;
     height: 32px;
     left: 165px;
     top: 16.5px;
@@ -226,7 +226,7 @@
 
     flex: none;
     flex-grow: 0;
-    margin: 0px 8px;
+    margin: 0px 4px;
 }
 
 .SearchIconBox {
@@ -314,14 +314,10 @@
     flex-grow: 0;
     margin: 0px 0px;
 
-
 }
 
-.SearchResult2
 
 .ActionsLeft{
-    /* Actions/Left */
-
 
     /* Auto Layout */
 
@@ -330,7 +326,6 @@
     align-items: center;
     padding: 0px 12px;
 
-    position: absolute;
     width: 208px;
     height: 36px;
     left: 0px;
@@ -338,7 +333,7 @@
 
 }
 
-.Frame10 {
+.FrameTen {
     /* Frame 10 */
 
 
@@ -359,30 +354,35 @@
     /* Inside Auto Layout */
 
     flex: none;
-    order: 0;
     flex-grow: 0;
     margin: 0px 8px;
 }
 
 .ActionsRight{
-    /* Frame 17 */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
 
+    position: absolute;
+    width: 71px;
+    height: 24px;
+    right: 10px;
+    top: calc(50% - 24px/2);
 
-    /* Auto Layout */
+}
 
+.Frame17 {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding: 0px;
 
-    position: absolute;
-    width: 37px;
+    position: static;
+    width: 61px;
     height: 36px;
     right: 12px;
     top: calc(50% - 36px/2);
-}
-
-.Frame17 {
 
 }
 
@@ -391,7 +391,7 @@
 
 
     position: static;
-    width: 100px;
+    width: 140px;
     height: 18px;
     left: 0px;
     top: calc(50% - 18px/2 - 9px);
@@ -411,12 +411,10 @@
     /* #0F1010 */
 
     color: #0F1010;
-    border: 0.5px solid #0F1010;
 
     /* Inside Auto Layout */
 
     flex: none;
-    order: 0;
     flex-grow: 0;
     margin: 0px 0px;
 }
@@ -426,7 +424,7 @@
 
 
     position: static;
-    width: 184px;
+    width: 360px;
     height: 18px;
     left: 0px;
     bottom: 0px;
