@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import BreakdownTable from './BreakdownTable';
 import getBreakdownByType from "./getBreakdownByType";
 import {BreakdownTabs} from "./BreakdownTabs";
+import getWine from "./getWine";
 
 
 export default function WineDetails(){
@@ -16,6 +17,12 @@ export default function WineDetails(){
         }, [lotCode, breakdownType]
     )
 
+    useEffect(()=> {
+            getWine(lotCode)
+                .then(setWine)
+        }, [lotCode]
+    )
+
     function onBreakdownSelect(key) {
         setBreakdownType(key);
         getBreakdownByType(lotCode, key).then(({breakdown})=>setBreakdown(breakdown));
@@ -25,7 +32,7 @@ export default function WineDetails(){
         <div className={"WineDetailsPage"}>
             <div className={"TableProduct"}>
                 <div className={"HeaderProduct"}>
-                    <p>Insert description here</p>
+                    <p>{wine.description}</p>
                 </div>
                 <div className={"TableSummary"}>
                     <table className={"TableDetails"}>
@@ -35,7 +42,7 @@ export default function WineDetails(){
                                     Volume
                                 </td>
                                 <td className={"SummaryDetailsRow"}>
-                                    Insert Volume Here
+                                    {wine.volume}
                                 </td>
                             </tr>
                             <tr className={"TableSummaryRow1"}>
@@ -43,23 +50,23 @@ export default function WineDetails(){
                                     Tank Code
                                 </td>
                                 <td>
-                                    Insert TankCode Here
+                                    {wine.tankCode}
                                 </td>
                             </tr>
                             <tr className={"TableSummaryRow2"}>
                                 <td>
-                                    Tank Code
+                                    Product State
                                 </td>
                                 <td>
-                                    Insert TankCode Here
+                                    {wine.productState}
                                 </td>
                             </tr>
                             <tr className={"TableSummaryRow3"}>
                                 <td>
-                                    Tank Code
+                                    Owner
                                 </td>
                                 <td>
-                                    Insert TankCode Here
+                                    {wine.ownerName}
                                 </td>
                             </tr>
                         </tbody>

@@ -3,6 +3,7 @@ package com.example.winestats.wine;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,6 +28,14 @@ public class WineController {
             List<Wine> matchedWine = wineService.searchWine(searchQuery);
             String wineString = new ObjectMapper().writeValueAsString(matchedWine);
             return wineService.convertStringtoJSONArray(wineString);
+    }
+
+    @RequestMapping(path = "/api/wine/details/{lotCode}")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
+    public JSONObject getWineByLotCode(@PathVariable String lotCode) throws JsonProcessingException, ParseException {
+        Wine matchedWine = wineService.readJsonFile(lotCode);
+        String wineString = new ObjectMapper().writeValueAsString(matchedWine);
+        return wineService.convertStringtoJSONObject(wineString);
     }
 
 
