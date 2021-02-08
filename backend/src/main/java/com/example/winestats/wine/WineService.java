@@ -28,7 +28,7 @@ public class WineService {
     public List<Wine> readAllWine() {
         List<Wine> allWines = new ArrayList<Wine>();
         try {
-            File[] files = new File("./backend/src/main/resources/data/").listFiles();
+            File[] files = new File("./src/main/resources/data/").listFiles();
             assert files != null;
             for (File file: files) {
                 String lotCode = file.getName().replace(".json", "");
@@ -68,7 +68,7 @@ public class WineService {
         // retrieve data from json
         JSONParser parser = new JSONParser();
         try {
-            String fileLocation = "./backend/src/main/resources/data/" + lotCode + ".json";
+            String fileLocation = "./src/main/resources/data/" + lotCode + ".json";
             JSONObject data = (JSONObject) parser.parse(new FileReader(fileLocation));
 
             Double volume = (Double) data.get("volume");
