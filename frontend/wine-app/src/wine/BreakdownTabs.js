@@ -15,10 +15,13 @@ export function BreakdownTabs({onBreakdownSelect}) {
         onBreakdownSelect(key)
     }
     return (
-        <div className="BreakdownSelector">
+        <div className={"TabOptions"}>
             {breakdownTypes.map((name) =>
                 (
-                    <button key={name} type='button' onClick={() => onClickHandler(name.key)}>{name.display}</button>
+                    <button className={"TabOptions"} key={name} type='button' onClick={() => onClickHandler(name.key)}>
+                        <div className={"Labels"}>{name.display}</div>
+
+                    </button>
                 )
             )
             }
