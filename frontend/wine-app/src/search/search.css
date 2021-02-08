@@ -71,7 +71,7 @@
     font-family: Montserrat, serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 26px;
+    font-size: 25px;
     line-height: 32px;
     /* identical to box height, or 125% */
 
@@ -137,6 +137,40 @@
     margin: 8px 0px;
 }
 
+.SearchQuery {
+    /* Label Left */
+
+
+    position: static;
+    width: 580px;
+    height: 18px;
+    left: 44px;
+    top: calc(50% - 18px/2);
+
+    /* Label Light 13px */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+
+    display: flex;
+    align-items: center;
+
+    /* #0F1010 */
+
+    color: #0F1010;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
 .SearchInputBox {
     /* Input/Square/Hint */
 
@@ -170,7 +204,7 @@
     align-items: center;
     padding: 0px 12px;
 
-    position: absolute;
+    position: relative;
     width: 294px;
     height: 24px;
     left: 0px;
@@ -326,7 +360,8 @@
     align-items: center;
     padding: 0px 12px;
 
-    width: 208px;
+    position: relative;
+    width: 448px;
     height: 36px;
     left: 0px;
     top: calc(50% - 36px/2);
@@ -345,7 +380,7 @@
     padding: 0px;
 
     position: static;
-    width: 184px;
+    width: 384px;
     height: 36px;
     left: 12px;
     top: 0px;
@@ -358,13 +393,46 @@
     margin: 0px 8px;
 }
 
+.SubResultDescription {
+    /* Text */
+
+
+    position: static;
+    width: 448px;
+    height: 18px;
+    left: 0px;
+    bottom: 0px;
+
+    /* Label Light 13px */
+
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 18px;
+    /* identical to box height, or 138% */
+
+    display: flex;
+    align-items: center;
+
+    /* #3A3B3B */
+
+    color: #3A3B3B;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
 .ActionsRight{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0px;
 
-    position: absolute;
+    position: relative;
     width: 71px;
     height: 24px;
     right: 10px;
@@ -373,12 +441,14 @@
 }
 
 .Frame17 {
+    /* Frame 17 */
+    /* Auto Layout */
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     padding: 0px;
 
-    position: static;
+    position: relative;
     width: 61px;
     height: 36px;
     right: 12px;
@@ -420,30 +490,29 @@
 }
 
 .SubResultText{
-    /* Text */
-
-
+    /* Volume */
     position: static;
-    width: 360px;
+    width: 37px;
     height: 18px;
-    left: 0px;
-    bottom: 0px;
-
+    right: 0px;
+    top: calc(50% - 18px/2 + 9px);
     /* Label Light 13px */
 
-    font-family: Montserrat, serif;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 8px;
     line-height: 18px;
     /* identical to box height, or 138% */
 
     display: flex;
     align-items: center;
+    text-align: right;
 
-    /* #3A3B3B */
+    /* #0F1010 */
 
-    color: #3A3B3B;
+    color: #0F1010;
+    opacity: 0.6;
 
     /* Inside Auto Layout */
 
@@ -476,6 +545,7 @@
     /* Inside Auto Layout */
 
     flex: none;
+    order: 1;
     flex-grow: 0;
     margin: 0px 0px;
 }

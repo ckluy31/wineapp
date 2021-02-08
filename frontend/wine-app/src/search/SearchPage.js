@@ -48,16 +48,17 @@ export default function SearchPage(){
                     <div className={"SearchInputBox"}>
                         <div className={"SearchActionsLeft"}>
                             <div className={"LabelLeft"}>
-
+                                <input className={"SearchQuery"} onChange={handleSearch} />
                             </div>
                             <div className={"SearchIconBox"}>
                                 <img src={closeIcon} className="CloseIcon" alt={"icon"}/>
                             </div>
 
                         </div>
+
                         <div className={"SearchActionsRight"}>
                         </div>
-                        <input className={"SearchQuery"} onChange={handleSearch} />
+
                     </div>
                     <div className={"ListResults"}>
 
