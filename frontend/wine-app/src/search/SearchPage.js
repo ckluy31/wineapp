@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import iconImg from './ICON.png'
 import './search.css'
 import closeIcon from "./Close.png";

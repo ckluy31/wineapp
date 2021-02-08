@@ -2,7 +2,6 @@ package com.example.winestats.wine;
 
 import org.json.simple.JSONArray;
 
-import java.util.List;
 
 public class Wine {
     // wine model to store the details of each wine

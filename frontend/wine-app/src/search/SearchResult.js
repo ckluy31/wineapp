@@ -2,6 +2,7 @@ import React from 'react';
 
 export function SearchResult({ searchResult: wine, onSelect}) {
     return (
+        // clicking a search result will initiate a redirect to wine page
         <div className="SearchResult" onClick={() => onSelect(wine)} >
 
             <div className={"ActionsLeft"}>
