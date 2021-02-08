@@ -1,8 +1,8 @@
 import React from 'react';
 
-export function SearchResult({ searchResult: wine }) {
+export function SearchResult({ searchResult: wine, onSelect}) {
     return (
-        <div className="SearchResult" >
+        <div className="SearchResult" onClick={() => onSelect(wine)} >
 
                 <div className={"ActionsLeft"}>
                     <div className={"FrameTen"}>

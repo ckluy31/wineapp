@@ -3,10 +3,16 @@ import iconImg from './ICON.png'
 import './search.css'
 import closeIcon from "./Close.png";
 import {SearchResult} from "./SearchResult";
+import { useHistory } from "react-router-dom";
 
 export default function SearchPage(){
     const [searchQuery, setSearchQuery] = useState(''); // keep track of the search query
     const [searchResults, setSearchResults] = useState([]); // regularly update results based on search query
+    const history = useHistory();
+
+    function handleClick(wine) {
+        history.push(`/wine/${wine.lotCode}`);
+    }
 
     async function handleSearch({target}){
         const searchQuery = target.value;
@@ -55,7 +61,7 @@ export default function SearchPage(){
                     </div>
                     <div className={"ListResults"}>
 
-                        {searchResults.map((wine) => <SearchResult key={wine.lotCode} searchResult={wine}/>)}
+                        {searchResults.map((wine) => <SearchResult key={wine.lotCode} searchResult={wine} onSelect={handleClick}/>)}
                     </div>
                 </div>
             </div>
