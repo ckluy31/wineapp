@@ -32,6 +32,7 @@ export default function WineDetails(){
         <div className={"WineDetailsPage"}>
             <div className={"TableProduct"}>
                 <div className={"HeaderProduct"}>
+                    <p>{wine.lotCode}</p>
                     <p>{wine.description}</p>
                 </div>
                 <div className={"TableSummary"}>
