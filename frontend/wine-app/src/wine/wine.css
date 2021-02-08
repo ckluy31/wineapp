@@ -8,12 +8,10 @@
 
     /*  #F5F5F5 */
 
-    background: #E5E5E5;
+    background: #F5F5F5;
 }
 .TableProduct {
     /* Table/Product */
-
-
     /* Auto Layout */
 
     display: flex;
@@ -28,29 +26,122 @@
     top: 142px;
 }
 
+.Title {
+    /* 14CH DEMO BLEND */
+
+
+    position: static;
+    width: 386px;
+    height: 40px;
+    left: 40px;
+    top: calc(50% - 40px/2);
+
+    /* H1 Light 40px */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 45px;
+    /* or 112% */
+
+    display: flex;
+    align-items: center;
+
+    /* #0F1010 */
+
+    color: #0F1010;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+}
+
+.DescriptionText {
+    /* <DESCRIPTION> */
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: static;
+    width: 728px;
+    height: 37px;
+    left: 0px;
+    top: 88px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 2;
+    align-self: flex-start;
+    flex-grow: 0;
+    margin: 4px 0px;
+}
+
+.DetailsAttributes {
+    /* Volume */
+
+
+    position: static;
+    width: 45%;
+    left: 16px;
+    top: 6.25%;
+    bottom: 6.25%;
+
+    /* H5 Reg 18px */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height, or 153% */
+
+    display: flex;
+    align-items: center;
+
+    /* #242525 */
+
+    color: #242525;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    margin: 0px 4px;
+}
+
 .HeaderProduct {
-    /* Table/Summary */
+    /* Header/Product */
 
 
     /* Auto Layout */
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 8px 0px;
+    align-items: flex-start;
+    padding: 0px;
 
     position: static;
     width: 768px;
-    height: 144px;
+    height: 125px;
     left: 0px;
-    top: 134px;
+    top: 0px;
 
 
     /* Inside Auto Layout */
 
     flex: none;
-    order: 1;
-    align-self: stretch;
+    order: 0;
     flex-grow: 0;
     margin: 9px 0px;
 }
@@ -115,11 +206,39 @@
 
     /* Inside Auto Layout */
 
-    flex: none;
+    display: flex;
+    flex-direction: row;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
     margin: 0px 0px;
+}
+
+.TableSummary {
+    /* Table/Summary */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0px;
+
+    position: static;
+    width: 768px;
+    height: 144px;
+    left: 0px;
+    top: 134px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 9px 0px;
 }
 
 .TableSummaryRow1 {
@@ -135,7 +254,8 @@
 
     /* Inside Auto Layout */
 
-    flex: none;
+    display: flex;
+    flex-direction: row;
     order: 1;
     align-self: stretch;
     flex-grow: 0;
@@ -155,7 +275,8 @@
 
     /* Inside Auto Layout */
 
-    flex: none;
+    display: flex;
+    flex-direction: row;
     order: 2;
     align-self: stretch;
     flex-grow: 0;
@@ -175,12 +296,110 @@
 
     /* Inside Auto Layout */
 
-    flex: none;
+    display: flex;
+    flex-direction: row;
     order: 3;
     flex-grow: 0;
     margin: 0px 0px;
 }
 
 .SummaryDetailsRow {
+    /* 100,000 L */
+
+
+    position: static;
+    width: 284px;
+    left: 16px;
+    top: 6.25%;
+    bottom: 6.25%;
+    float: right;
+
+    /* H5 Light */
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height, or 153% */
+
+    display: flex;
+    align-items: center;
     text-align: right;
+
+    /* #242525 */
+
+    color: #242525;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    margin: 0px 4px;
+}
+
+.BreakDownKey {
+    /* Label Light 13px */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+
+    position: static;
+    width: 45%;
+    left: 16px;
+    top: 6.25%;
+    bottom: 6.25%;
+}
+
+.BreakDownVal {
+    /* Label Light 13px */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+
+    position: static;
+    width: 284px;
+    left: 16px;
+    top: 6.25%;
+    bottom: 6.25%;
+    float: right;
+}
+
+.BreakDownKeyHeader {
+    /* Label Light 13px */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 18px;
+
+    position: static;
+    width: 45%;
+    top: 6.25%;
+    bottom: 6.25%;
+}
+
+.BreakDownValHeader {
+    /* Label Light 13px */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 18px;
+
+    position: static;
+    width: 284px;
+    left: 16px;
+    top: 6.25%;
+    bottom: 6.25%;
+    float: right;
 }

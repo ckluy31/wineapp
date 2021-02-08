@@ -3,13 +3,13 @@ import React, {useEffect, useState} from 'react';
 export default function BreakdownTable({ breakdown, breakdownType}) {
 
     return(
-        <table>
+        <table className={"BreakdownTable"}>
             <thead>
                 <tr>
-                    <th>
+                    <th className={"BreakDownKeyHeader"}>
                         {breakdownType.toUpperCase()}
                     </th>
-                    <th>
+                    <th className={"BreakDownValHeader"}>
                         PERCENTAGE
                     </th>
                 </tr>
@@ -17,10 +17,10 @@ export default function BreakdownTable({ breakdown, breakdownType}) {
             <tbody>
             {
                 breakdown.map(row => <tr>
-                    <td>
+                    <td className={"BreakDownKey"}>
                         {row.key}
                     </td>
-                    <td>
+                    <td className={"BreakDownVal"}>
                         {row.percentage}
                     </td>
                 </tr>)

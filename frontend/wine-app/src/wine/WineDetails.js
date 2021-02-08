@@ -4,6 +4,7 @@ import BreakdownTable from './BreakdownTable';
 import getBreakdownByType from "./getBreakdownByType";
 import {BreakdownTabs} from "./BreakdownTabs";
 import getWine from "./getWine";
+import './wine.css'
 
 
 export default function WineDetails(){
@@ -32,41 +33,41 @@ export default function WineDetails(){
         <div className={"WineDetailsPage"}>
             <div className={"TableProduct"}>
                 <div className={"HeaderProduct"}>
-                    <p>{wine.lotCode}</p>
-                    <p>{wine.description}</p>
+                    <p className={"Title"}>{wine.lotCode}</p>
+                    <p className={"DescriptionText"}>{wine.description}</p>
                 </div>
                 <div className={"TableSummary"}>
                     <table className={"TableDetails"}>
                         <tbody>
                             <tr className={"TableSummaryRow0"}>
-                                <td>
+                                <td className={"DetailsAttributes"}>
                                     Volume
                                 </td>
                                 <td className={"SummaryDetailsRow"}>
-                                    {wine.volume}
+                                    {wine.volume + " L"}
                                 </td>
                             </tr>
                             <tr className={"TableSummaryRow1"}>
-                                <td>
+                                <td className={"DetailsAttributes"}>
                                     Tank Code
                                 </td>
-                                <td>
+                                <td className={"SummaryDetailsRow"}>
                                     {wine.tankCode}
                                 </td>
                             </tr>
                             <tr className={"TableSummaryRow2"}>
-                                <td>
+                                <td className={"DetailsAttributes"}>
                                     Product State
                                 </td>
-                                <td>
+                                <td className={"SummaryDetailsRow"}>
                                     {wine.productState}
                                 </td>
                             </tr>
                             <tr className={"TableSummaryRow3"}>
-                                <td>
+                                <td className={"DetailsAttributes"}>
                                     Owner
                                 </td>
-                                <td>
+                                <td className={"SummaryDetailsRow"}>
                                     {wine.ownerName}
                                 </td>
                             </tr>
