@@ -6,6 +6,7 @@ import {BreakdownTabs} from "./BreakdownTabs";
 import getWine from "./getWine";
 import './wine.css'
 import {BackButton} from "./BackButton";
+import {EditButton} from "./EditButton";
 
 
 export default function WineDetails(){
@@ -34,17 +35,26 @@ export default function WineDetails(){
 
 
 
-    function handleClick(wine) {
+    function handleClickBack() {
         history.push("/");
+    }
+
+    function handleClickEdit() {
+        alert("Edit Button has been Clicked!");
     }
 
     return(
         <div className={"WineDetailsPage"}>
             <div className={"TableProduct"}>
                 <div className={"HeaderProduct"}>
-                    <BackButton onClick={handleClick}/>
-                    <p className={"Title"}>{wine.lotCode}</p>
-                    <p className={"DescriptionText"}>{wine.description}</p>
+                    <div className={"HeaderProductLeft"}>
+                        <BackButton onClick={handleClickBack}/>
+                        <p className={"Title"}>{wine.lotCode}</p>
+                        <p className={"DescriptionText"}>{wine.description}</p>
+                    </div>
+                    <div className={"HeaderProductRight"}>
+                        <EditButton onClick={handleClickEdit}/>
+                    </div>
                 </div>
                 <div className={"TableSummary"}>
                     <table className={"TableDetails"}>

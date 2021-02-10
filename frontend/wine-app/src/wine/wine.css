@@ -127,7 +127,7 @@
     /* Auto Layout */
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     padding: 0px;
 
@@ -501,4 +501,59 @@
     align-self: flex-start;
     flex-grow: 0;
     margin: 4px 0px;
+}
+
+.HeaderProductLeft {
+    /* Frame 14 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+
+    position: static;
+    width: 426px;
+    height: 125px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    align-self: flex-start;
+    flex-grow: 0;
+}
+
+.HeaderProductRight {
+    /* Frame 16 */
+
+
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 22px 0px;
+
+    position: static;
+    width: 56px;
+    height: 100px;
+    left: 712px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: flex-start;
+    flex-grow: 0;
+    margin: 0px 86px;
+
+
 }
