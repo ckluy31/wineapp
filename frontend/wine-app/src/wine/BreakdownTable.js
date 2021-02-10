@@ -1,6 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export default function BreakdownTable({ breakdown, breakdownType}) {
+    const [resultsLimit, setResultsLimit] = useState(5); // the max number of results to be displayed
+    const showMoreActive = breakdown.length > resultsLimit; // boolean to see if showMore button should appear or not
+
+
+    function handleShowMore() {
+        // increase the number of results to be shown
+        setResultsLimit(resultsLimit + 10);
+    }
 
     return(
         <table className={"BreakdownTable"}>
@@ -16,7 +24,7 @@ export default function BreakdownTable({ breakdown, breakdownType}) {
             </thead>
             <tbody>
             {
-                breakdown.map(row => <tr>
+                breakdown.slice(0, resultsLimit).map((row) => <tr>
                     <td className={"BreakDownKey"}>
                         {row.key}
                     </td>
@@ -24,6 +32,12 @@ export default function BreakdownTable({ breakdown, breakdownType}) {
                         {row.percentage}
                     </td>
                 </tr>)
+            }
+            {showMoreActive ?
+                <div>
+                <button onClick={handleShowMore} className="ShowMoreButton">Show more</button>
+                </div>
+                :""
             }
             </tbody>
         </table>

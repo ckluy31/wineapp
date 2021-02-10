@@ -61,7 +61,6 @@ export default function SearchPage(){
 
                     </div>
                     <div className={"ListResults"}>
-
                         {searchResults.map((wine) => <SearchResult key={wine.lotCode} searchResult={wine} onSelect={handleClick}/>)}
                     </div>
                 </div>
