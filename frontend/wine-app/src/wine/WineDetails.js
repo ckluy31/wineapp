@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import BreakdownTable from './BreakdownTable';
 import getBreakdownByType from "./getBreakdownByType";
 import {BreakdownTabs} from "./BreakdownTabs";
 import getWine from "./getWine";
 import './wine.css'
+import {BackButton} from "./BackButton";
 
 
 export default function WineDetails(){
@@ -12,6 +13,8 @@ export default function WineDetails(){
     const [wine, setWine] = useState({});
     const [breakdown, setBreakdown] = useState([]);
     const [breakdownType, setBreakdownType] = useState('year')
+    const history = useHistory();
+
     useEffect(()=> {
             getBreakdownByType(lotCode, breakdownType)
                 .then(({breakdown})=>setBreakdown(breakdown))
@@ -29,10 +32,17 @@ export default function WineDetails(){
         getBreakdownByType(lotCode, key).then(({breakdown})=>setBreakdown(breakdown));
     }
 
+
+
+    function handleClick(wine) {
+        history.push("/");
+    }
+
     return(
         <div className={"WineDetailsPage"}>
             <div className={"TableProduct"}>
                 <div className={"HeaderProduct"}>
+                    <BackButton onClick={handleClick}/>
                     <p className={"Title"}>{wine.lotCode}</p>
                     <p className={"DescriptionText"}>{wine.description}</p>
                 </div>
