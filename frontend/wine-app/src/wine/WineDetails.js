@@ -5,8 +5,8 @@ import getBreakdownByType from "./getBreakdownByType";
 import {BreakdownTabs} from "./BreakdownTabs";
 import getWine from "./getWine";
 import './wine.css'
-import {BackButton} from "./BackButton";
-import {EditButton} from "./EditButton";
+import {BackButton} from "./buttons/BackButton";
+import {EditButton} from "./buttons/EditButton";
 
 
 export default function WineDetails(){
